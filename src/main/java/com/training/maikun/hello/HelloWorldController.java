@@ -48,7 +48,7 @@ public class HelloWorldController {
     * @Date: 2018/7/29 下午1:18
     */
     @GetMapping(path = "/sayhello/person")
-    public String sayHelloWithParam(@RequestParam("name") String name){
+    public String sayHelloWithParam(@RequestParam(value = "name",defaultValue = "lila") String name){
         return String.format(TEST_WORDS, name);
     }
 
@@ -58,7 +58,7 @@ public class HelloWorldController {
      * @Param: [name]
      * @return: java.lang.String
      * @Author: Mr.Cheng
-     * @Date: 2018/7/29 &#x4e0b;&#x5348;2:16
+     * @Date: 2018/7/29 2:16
      */
     @PostMapping(path = "/sayhello/consume",consumes = "application/json")
     public String sayHelloConsumes(@RequestBody String name){
