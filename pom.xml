@@ -44,27 +44,27 @@
 	</dependencies>
 
 	<scm>
-		<!-- <url>https://github.com/chenProfession/javatraining</url> -->
-	    <!-- <connection>scm:git:ssh://git@github.com:chenProfession/javatraining.git</connection> -->
-    <developerConnection>scm:git:https://github.com/chenProfession/javatraining.git</developerConnection>
-</scm>
+		<url>https://github.com/chenProfession/javatraining</url>
+		<connection>scm:git:https://github.com/chenProfession/javatraining.git</connection>
+		<developerConnection>scm:git:https://github.com/chenProfession/javatraining.git</developerConnection>
+	</scm>
 
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-scm-plugin</artifactId>
-			<version>1.9.5</version>
-			<configuration>
-				<connectionType>developerConnection</connectionType>
-			</configuration>
-		</plugin>
-    </plugins>
-</build>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.9.5</version>
+				<configuration>
+					<connectionType>developerConnection</connectionType>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 
 
