@@ -46,7 +46,7 @@
 	<scm>
 		<!-- <url>https://github.com/chenProfession/javatraining</url> -->
 	    <!-- <connection>scm:git:ssh://git@github.com:chenProfession/javatraining.git</connection> -->
-    <developerConnection>scm:git:ssh://git@github.com:chenProfession/javatraining.git</developerConnection>
+    <developerConnection>scm:git:https://github.com/chenProfession/javatraining.git</developerConnection>
 </scm>
 
 <build>
