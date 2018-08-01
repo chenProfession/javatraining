@@ -2,3 +2,5 @@ server:
   port: 8080
   servlet:
     context-path: /maikun
+logging:
+  file: /Volumes/MyPassport/minprogram/order/ordering.log

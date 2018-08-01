@@ -1,5 +1,8 @@
 package com.training.maikun.hello;
 
+import com.training.maikun.result.ResultView;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,10 +14,12 @@ import org.springframework.web.bind.annotation.*;
  * @date: 2018/7/29 上午12:50
  */
 @RestController
-@RequestMapping("/hello")
+@RequestMapping(value = "/hello")
 public class HelloWorldController {
 
     private final String TEST_WORDS = "Demo for Restful Web Service, welcome %s!";
+    private static final String STATUS = "I have written a log file!";
+   // private static Logger logger = LoggerFactory.getLogger(HelloWorldController.class);
 
     /**
     * @Description: 如果 @RequestMapping 没有method属性，则接收任意类型的URL请求。
@@ -78,5 +83,19 @@ public class HelloWorldController {
             name = "Producer";
         }
         return String.format(TEST_WORDS, name);
+    }
+
+    /**
+     * @Description: Write a logg file
+     * @Param: []
+     * @return: void
+     * @Author: Mr.Cheng
+     * @Date: 2018/8/1 上午10:15
+     */
+
+    @GetMapping(path = "/output")
+    public String outputLoggerFile(){
+ //       logger.info("Today is very hot!");
+        return STATUS;
     }
 }

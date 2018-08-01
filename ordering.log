@@ -1,0 +1,299 @@
+2018-08-01 13:16:15.357  INFO 15299 --- [main] com.training.maikun.Application          : Starting Application on ChengdeMBP.lan with PID 15299 (/Volumes/MyPassport/minprogram/order/target/classes started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-01 13:16:15.361  INFO 15299 --- [main] com.training.maikun.Application          : The following profiles are active: dev
+2018-08-01 13:16:15.425  INFO 15299 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3835c46: startup date [Wed Aug 01 13:16:15 CST 2018]; root of context hierarchy
+2018-08-01 13:16:16.917  INFO 15299 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-01 13:16:16.951  INFO 15299 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-01 13:16:16.951  INFO 15299 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-01 13:16:16.956  INFO 15299 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chengchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-01 13:16:17.053  INFO 15299 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring embedded WebApplicationContext
+2018-08-01 13:16:17.054  INFO 15299 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1629 ms
+2018-08-01 13:16:17.221  INFO 15299 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-01 13:16:17.226  INFO 15299 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-01 13:16:17.226  INFO 15299 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-01 13:16:17.226  INFO 15299 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-01 13:16:17.227  INFO 15299 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-01 13:16:17.326  INFO 15299 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:16:17.545  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3835c46: startup date [Wed Aug 01 13:16:15 CST 2018]; root of context hierarchy
+2018-08-01 13:16:17.591  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.hello.HelloWorldController.sayHello()
+2018-08-01 13:16:17.593  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/{name}],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithURI(java.lang.String)
+2018-08-01 13:16:17.593  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/person],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithParam(java.lang.String)
+2018-08-01 13:16:17.593  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/consume],methods=[POST],consumes=[application/json]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloConsumes(java.lang.String)
+2018-08-01 13:16:17.594  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/produces/{name}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloProduces(java.lang.String)
+2018-08-01 13:16:17.594  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/output],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.outputLoggerFile()
+2018-08-01 13:16:17.594  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList()
+2018-08-01 13:16:17.597  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-01 13:16:17.598  INFO 15299 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-01 13:16:17.614  INFO 15299 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:16:17.614  INFO 15299 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:16:17.708  INFO 15299 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-01 13:16:17.751  INFO 15299 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/maikun'
+2018-08-01 13:16:17.756  INFO 15299 --- [main] com.training.maikun.Application          : Started Application in 3.171 seconds (JVM running for 3.896)
+2018-08-01 13:16:51.960  INFO 15299 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-01 13:16:52.039  INFO 15299 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-01 13:16:52.069  INFO 15299 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-08-01 13:16:52.134 ERROR 15299 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/maikun] threw exception [Handler dispatch failed; nested exception is java.lang.AbstractMethodError: com.fasterxml.jackson.core.type.ResolvedType.getReferencedType()Lcom/fasterxml/jackson/core/type/ResolvedType;] with root cause
+
+java.lang.AbstractMethodError: com.fasterxml.jackson.core.type.ResolvedType.getReferencedType()Lcom/fasterxml/jackson/core/type/ResolvedType;
+	at com.fasterxml.jackson.core.type.ResolvedType.isReferenceType(ResolvedType.java:59) ~[jackson-core-2.9.6.jar:2.9.6]
+	at com.fasterxml.jackson.datatype.jdk8.Jdk8TypeModifier.modifyType(Jdk8TypeModifier.java:20) ~[jackson-datatype-jdk8-2.9.6.jar:2.9.6]
+	at com.fasterxml.jackson.databind.type.TypeFactory._constructType(TypeFactory.java:413) ~[jackson-databind-2.5.3.jar:2.5.3]
+	at com.fasterxml.jackson.databind.type.TypeFactory.constructType(TypeFactory.java:358) ~[jackson-databind-2.5.3.jar:2.5.3]
+	at com.fasterxml.jackson.databind.cfg.MapperConfig.constructType(MapperConfig.java:268) ~[jackson-databind-2.5.3.jar:2.5.3]
+	at com.fasterxml.jackson.databind.SerializerProvider._createAndCacheUntypedSerializer(SerializerProvider.java:1117) ~[jackson-databind-2.5.3.jar:2.5.3]
+	at com.fasterxml.jackson.databind.SerializerProvider._findExplicitUntypedSerializer(SerializerProvider.java:1089) ~[jackson-databind-2.5.3.jar:2.5.3]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.hasSerializerFor(DefaultSerializerProvider.java:392) ~[jackson-databind-2.5.3.jar:2.5.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.canSerialize(ObjectMapper.java:2410) ~[jackson-databind-2.5.3.jar:2.5.3]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.canWrite(AbstractJackson2HttpMessageConverter.java:172) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.canWrite(AbstractGenericHttpMessageConverter.java:75) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.getProducibleMediaTypes(AbstractMessageConverterMethodProcessor.java:352) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:223) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:180) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:119) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851) ~[spring-webmvc-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_65]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.31.jar:8.5.31]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_65]
+
+2018-08-01 13:44:11.943  INFO 16432 --- [main] com.training.maikun.Application          : Starting Application on ChengdeMBP with PID 16432 (/Volumes/MyPassport/minprogram/order/target/classes started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-01 13:44:11.947  INFO 16432 --- [main] com.training.maikun.Application          : The following profiles are active: dev
+2018-08-01 13:44:12.027  INFO 16432 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@dd8ba08: startup date [Wed Aug 01 13:44:12 CST 2018]; root of context hierarchy
+2018-08-01 13:44:13.648  INFO 16432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-01 13:44:13.669  INFO 16432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-01 13:44:13.670  INFO 16432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-01 13:44:13.674  INFO 16432 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chengchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-01 13:44:13.755  INFO 16432 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring embedded WebApplicationContext
+2018-08-01 13:44:13.755  INFO 16432 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1728 ms
+2018-08-01 13:44:13.917  INFO 16432 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-01 13:44:13.923  INFO 16432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-01 13:44:13.923  INFO 16432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-01 13:44:13.924  INFO 16432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-01 13:44:13.924  INFO 16432 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-01 13:44:14.062  INFO 16432 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:44:14.303  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@dd8ba08: startup date [Wed Aug 01 13:44:12 CST 2018]; root of context hierarchy
+2018-08-01 13:44:14.360  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.hello.HelloWorldController.sayHello()
+2018-08-01 13:44:14.363  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/{name}],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithURI(java.lang.String)
+2018-08-01 13:44:14.364  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/person],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithParam(java.lang.String)
+2018-08-01 13:44:14.365  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/consume],methods=[POST],consumes=[application/json]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloConsumes(java.lang.String)
+2018-08-01 13:44:14.365  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/produces/{name}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloProduces(java.lang.String)
+2018-08-01 13:44:14.365  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/output],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.outputLoggerFile()
+2018-08-01 13:44:14.367  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList()
+2018-08-01 13:44:14.371  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-01 13:44:14.372  INFO 16432 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-01 13:44:14.396  INFO 16432 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:44:14.397  INFO 16432 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:44:14.588  INFO 16432 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-01 13:44:14.645 ERROR 16432 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at com.training.maikun.Application.main(Application.java:15) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_65]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_65]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_65]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_65]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_65]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	... 14 common frames omitted
+
+2018-08-01 13:44:14.654  INFO 16432 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-08-01 13:44:14.663  INFO 16432 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-01 13:44:14.667 ERROR 16432 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-08-01 13:44:14.668  INFO 16432 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@dd8ba08: startup date [Wed Aug 01 13:44:12 CST 2018]; root of context hierarchy
+2018-08-01 13:44:14.670  INFO 16432 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-01 13:49:55.296  INFO 16879 --- [main] com.training.maikun.Application          : Starting Application on ChengdeMBP with PID 16879 (/Volumes/MyPassport/minprogram/order/target/classes started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-01 13:49:55.299  INFO 16879 --- [main] com.training.maikun.Application          : The following profiles are active: dev
+2018-08-01 13:49:55.375  INFO 16879 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20deea7f: startup date [Wed Aug 01 13:49:55 CST 2018]; root of context hierarchy
+2018-08-01 13:49:57.181  INFO 16879 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-01 13:49:57.207  INFO 16879 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-01 13:49:57.207  INFO 16879 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-01 13:49:57.211  INFO 16879 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chengchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-01 13:49:57.307  INFO 16879 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring embedded WebApplicationContext
+2018-08-01 13:49:57.309  INFO 16879 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1934 ms
+2018-08-01 13:49:57.499  INFO 16879 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-01 13:49:57.508  INFO 16879 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-01 13:49:57.508  INFO 16879 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-01 13:49:57.509  INFO 16879 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-01 13:49:57.509  INFO 16879 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-01 13:49:57.639  INFO 16879 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:49:57.876  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20deea7f: startup date [Wed Aug 01 13:49:55 CST 2018]; root of context hierarchy
+2018-08-01 13:49:57.929  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHello()
+2018-08-01 13:49:57.931  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/{name}],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithURI(java.lang.String)
+2018-08-01 13:49:57.932  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/person],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithParam(java.lang.String)
+2018-08-01 13:49:57.933  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/consume],methods=[POST],consumes=[application/json]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloConsumes(java.lang.String)
+2018-08-01 13:49:57.933  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/produces/{name}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloProduces(java.lang.String)
+2018-08-01 13:49:57.934  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/output],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.outputLoggerFile()
+2018-08-01 13:49:57.935  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList()
+2018-08-01 13:49:57.938  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-01 13:49:57.939  INFO 16879 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-01 13:49:57.965  INFO 16879 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:49:57.966  INFO 16879 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:49:58.151  INFO 16879 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-01 13:49:58.212 ERROR 16879 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.0.7.RELEASE.jar:5.0.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) [spring-boot-2.0.3.RELEASE.jar:2.0.3.RELEASE]
+	at com.training.maikun.Application.main(Application.java:15) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_65]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_65]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_65]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_65]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_65]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018) ~[tomcat-embed-core-8.5.31.jar:8.5.31]
+	... 14 common frames omitted
+
+2018-08-01 13:49:58.221  INFO 16879 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-08-01 13:49:58.232  INFO 16879 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-01 13:49:58.236 ERROR 16879 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-08-01 13:49:58.237  INFO 16879 --- [main] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20deea7f: startup date [Wed Aug 01 13:49:55 CST 2018]; root of context hierarchy
+2018-08-01 13:49:58.240  INFO 16879 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-01 13:51:27.399  INFO 15299 --- [Thread-10] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3835c46: startup date [Wed Aug 01 13:16:15 CST 2018]; root of context hierarchy
+2018-08-01 13:51:27.423  INFO 15299 --- [Thread-10] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-01 13:51:47.894  INFO 17029 --- [main] com.training.maikun.Application          : Starting Application on ChengdeMBP with PID 17029 (/Volumes/MyPassport/minprogram/order/target/classes started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-01 13:51:47.896  INFO 17029 --- [main] com.training.maikun.Application          : The following profiles are active: dev
+2018-08-01 13:51:47.947  INFO 17029 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@dd8ba08: startup date [Wed Aug 01 13:51:47 CST 2018]; root of context hierarchy
+2018-08-01 13:51:49.389  INFO 17029 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-01 13:51:49.412  INFO 17029 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-01 13:51:49.412  INFO 17029 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-01 13:51:49.416  INFO 17029 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chengchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-01 13:51:49.471  INFO 17029 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring embedded WebApplicationContext
+2018-08-01 13:51:49.471  INFO 17029 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1524 ms
+2018-08-01 13:51:49.569  INFO 17029 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-01 13:51:49.572  INFO 17029 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-01 13:51:49.573  INFO 17029 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-01 13:51:49.573  INFO 17029 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-01 13:51:49.573  INFO 17029 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-01 13:51:49.717  INFO 17029 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:51:49.887  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@dd8ba08: startup date [Wed Aug 01 13:51:47 CST 2018]; root of context hierarchy
+2018-08-01 13:51:49.925  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHello()
+2018-08-01 13:51:49.928  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/{name}],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithURI(java.lang.String)
+2018-08-01 13:51:49.929  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/person],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithParam(java.lang.String)
+2018-08-01 13:51:49.930  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/consume],methods=[POST],consumes=[application/json]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloConsumes(java.lang.String)
+2018-08-01 13:51:49.930  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/produces/{name}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloProduces(java.lang.String)
+2018-08-01 13:51:49.931  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/output],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.outputLoggerFile()
+2018-08-01 13:51:49.931  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList()
+2018-08-01 13:51:49.934  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-01 13:51:49.934  INFO 17029 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-01 13:51:49.956  INFO 17029 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:51:49.956  INFO 17029 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-01 13:51:50.074  INFO 17029 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-01 13:51:50.119  INFO 17029 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/maikun'
+2018-08-01 13:51:50.122  INFO 17029 --- [main] com.training.maikun.Application          : Started Application in 2.826 seconds (JVM running for 3.873)
+2018-08-01 13:52:04.695  INFO 17029 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-01 13:52:04.696  INFO 17029 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-01 13:52:04.716  INFO 17029 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-08-01 13:52:11.549  INFO 17029 --- [Thread-9] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@dd8ba08: startup date [Wed Aug 01 13:51:47 CST 2018]; root of context hierarchy
+2018-08-01 13:52:11.555  INFO 17029 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
