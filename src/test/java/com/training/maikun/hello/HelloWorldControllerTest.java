@@ -31,7 +31,7 @@ public class HelloWorldControllerTest {
     public void testSayHello() throws Exception {
         this.mvc.perform(get("/hello/sayhello").accept(MediaType.TEXT_PLAIN))
                         .andExpect(status().isOk())
-                        .andExpect(content().string("Demo for Restful Web Service, welcome everyone!"));
+                        .andExpect(content().string("Demo for Restful Web Service, welcome everyone !"));
     }
 
     /**
@@ -45,7 +45,7 @@ public class HelloWorldControllerTest {
     public void testSayHelloWithURIVariables() throws Exception{
         this.mvc.perform(get("/hello/sayhello/Hero").accept(MediaType.TEXT_PLAIN))
                         .andExpect(status().isOk())
-                        .andExpect(content().string("Demo for Restful Web Service, welcome Hero!"));
+                        .andExpect(content().string("Demo for Restful Web Service, welcome Hero !"));
 
     }
 }

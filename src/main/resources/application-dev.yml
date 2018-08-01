@@ -4,3 +4,5 @@ server:
     context-path: /maikun
 logging:
   file: /Volumes/MyPassport/minprogram/order/ordering.log
+  level:
+     com.training.maikun.hello.HelloWorldController: debug

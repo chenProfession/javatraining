@@ -1,8 +1,6 @@
 package com.training.maikun.hello;
 
-import com.training.maikun.result.ResultView;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,11 +13,11 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping(value = "/hello")
+@Slf4j
 public class HelloWorldController {
 
-    private final String TEST_WORDS = "Demo for Restful Web Service, welcome %s!";
-    private static final String STATUS = "I have written a log file!";
-   // private static Logger logger = LoggerFactory.getLogger(HelloWorldController.class);
+    private final String TEST_WORDS = "Demo for Restful Web Service, welcome %s !";
+    private static final String STATUS = "I have written a log file,the level is %s !";
 
     /**
     * @Description: 如果 @RequestMapping 没有method属性，则接收任意类型的URL请求。
@@ -30,6 +28,10 @@ public class HelloWorldController {
     */
     @GetMapping(path = "/sayhello")
     public String sayHello(){
+        log.info(String.format(STATUS,"info"));
+        log.debug(String.format(STATUS,"debug"));
+        log.warn(String.format(STATUS,"warn"));
+        log.error(String.format(STATUS,"error"));
         return String.format(TEST_WORDS,"everyone");
     }
 
