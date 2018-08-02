@@ -1,7 +1,7 @@
 package com.training.maikun.products;
 
 //import com.training.maikun.products.view.ProductInfoView;
-//import com.training.maikun.products.view.ProductView;
+import com.training.maikun.products.view.ProductView;
 
 import com.training.maikun.result.ResultView;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,9 +37,15 @@ public class ProductController {
 
         /* this is just for testing purpose */
         ResultView resultView = new ResultView();
+        ProductView productView = new ProductView();
+
+        productView.setCategoryName("Week in Search");
+        productView.setCategoryType(1);
+        productView.setProductInfoViewList(productService.findUpAll());
+
         resultView.setCode(0);
         resultView.setMsg("Success");
-        resultView.setData(productService.findUpAll());
+        resultView.setData(productView);
         return resultView;
 
 //      *************************************************************

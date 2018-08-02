@@ -1,5 +1,7 @@
 package com.training.maikun.products;
 
+import com.training.maikun.products.view.ProductInfoView;
+
 import java.util.List;
 
 /**
@@ -18,5 +20,5 @@ public interface ProductService {
     * @Author: Mr.Cheng
     * @Date: 2018/8/1 上午5:15
     */
-    List<ProductInfo> findUpAll();
+    List<ProductInfoView> findUpAll();
 }
