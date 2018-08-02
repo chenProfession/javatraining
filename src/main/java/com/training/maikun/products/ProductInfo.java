@@ -13,27 +13,28 @@ import java.util.Date;
  */
 @Data
 public class ProductInfo {
+
     private String productId;
 
-    /** 名字. */
+    /** product name */
     private String productName;
 
-    /** 单价. */
+    /** product price */
     private BigDecimal productPrice;
 
-    /** 库存. */
+    /** stock */
     private Integer productStock;
 
-    /** 描述. */
+    /** description */
     private String productDescription;
 
-    /** 小图. */
+    /** icon */
     private String productIcon;
 
-    /** 状态, 0正常1下架. */
+    /** status, 0 normal , 1 Out Of Stock */
     private Integer productStatus;
 
-    /** 类目编号. */
+    /** category type id */
     private Integer categoryType;
 
     private Date createTime;

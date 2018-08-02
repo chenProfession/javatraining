@@ -1,4 +1,4 @@
-package com.training.maikun.products;
+package com.training.maikun.products.view;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

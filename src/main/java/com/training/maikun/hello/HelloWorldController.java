@@ -97,7 +97,7 @@ public class HelloWorldController {
 
     @GetMapping(path = "/output")
     public String outputLoggerFile(){
- //       logger.info("Today is very hot!");
+        log.info("Today is very hot!");
         return STATUS;
     }
 }

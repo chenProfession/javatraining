@@ -1,4 +1,4 @@
-package com.training.maikun.products;
+package com.training.maikun.products.view;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
@@ -11,27 +11,16 @@ import java.util.List;
  * @author: Mr.Cheng
  * @date: 2018/8/1 上午4:44
  */
-
+@Data
 public class ProductView {
+
     @JsonProperty("name")
     private String categoryName;
 
     @JsonProperty("type")
     private Integer categoryType;
 
-    @JsonProperty("foods")
+    @JsonProperty("finance products")
     private List<ProductInfoView> productInfoViewList;
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-
-    public void setCategoryType(Integer categoryType) {
-        this.categoryType = categoryType;
-    }
-
-    public void setProductInfoVOList(List<ProductInfoView> productInfoViewList) {
-        this.productInfoViewList = productInfoViewList;
-    }
 }

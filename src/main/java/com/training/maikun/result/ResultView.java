@@ -1,33 +1,24 @@
 package com.training.maikun.result;
 
 
+import lombok.Data;
+
 /**
  * @program: order
  * @Description: To show the result of retrieving
  * @author: Mr.Cheng
  * @date: 2018/8/1 上午4:51
  */
-
+@Data
 public class ResultView<T> {
 
-    /** 错误码. */
+    /** code */
     private Integer code;
 
-    /** 提示信息. */
+    /** message */
     private String msg;
 
-    /** 具体内容. */
+    /** content of data */
     private T data;
 
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
 }
