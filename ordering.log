@@ -1,0 +1,114 @@
+2018-08-02 15:28:42.278  INFO 18960 --- [main] com.training.maikun.Application          : Starting Application on ChengdeMBP.lan with PID 18960 (/Volumes/MyPassport/minprogram/order/target/classes started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-02 15:28:42.281  INFO 18960 --- [main] com.training.maikun.Application          : The following profiles are active: dev
+2018-08-02 15:28:42.361  INFO 18960 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3a93b025: startup date [Thu Aug 02 15:28:42 CST 2018]; root of context hierarchy
+2018-08-02 15:28:43.958  INFO 18960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-02 15:28:43.997  INFO 18960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-02 15:28:43.997  INFO 18960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-02 15:28:44.005  INFO 18960 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chengchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-02 15:28:44.104  INFO 18960 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring embedded WebApplicationContext
+2018-08-02 15:28:44.105  INFO 18960 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1744 ms
+2018-08-02 15:28:44.266  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-02 15:28:44.272  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 15:28:44.272  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 15:28:44.272  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 15:28:44.272  INFO 18960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 15:28:44.312  WARN 18960 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController': Unsatisfied dependency expressed through field 'productService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.training.maikun.products.ProductService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-08-02 15:28:44.315  INFO 18960 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-08-02 15:28:44.327  INFO 18960 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-08-02 15:28:44.416 ERROR 18960 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field productService in com.training.maikun.products.ProductController required a bean of type 'com.training.maikun.products.ProductService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.training.maikun.products.ProductService' in your configuration.
+
+2018-08-02 15:55:52.276  INFO 21005 --- [main] com.training.maikun.Application          : Starting Application on ChengdeMBP.lan with PID 21005 (/Volumes/MyPassport/minprogram/order/target/classes started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-02 15:55:52.283  INFO 21005 --- [main] com.training.maikun.Application          : The following profiles are active: dev
+2018-08-02 15:55:52.404  INFO 21005 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3bb9a3ff: startup date [Thu Aug 02 15:55:52 CST 2018]; root of context hierarchy
+2018-08-02 15:55:53.897  INFO 21005 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-02 15:55:53.925  INFO 21005 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-02 15:55:53.926  INFO 21005 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-02 15:55:53.932  INFO 21005 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chengchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-02 15:55:54.021  INFO 21005 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring embedded WebApplicationContext
+2018-08-02 15:55:54.021  INFO 21005 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1618 ms
+2018-08-02 15:55:54.207  INFO 21005 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-02 15:55:54.212  INFO 21005 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-02 15:55:54.213  INFO 21005 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-02 15:55:54.215  INFO 21005 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-02 15:55:54.216  INFO 21005 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-02 15:55:54.354  INFO 21005 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:55:54.610  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3bb9a3ff: startup date [Thu Aug 02 15:55:52 CST 2018]; root of context hierarchy
+2018-08-02 15:55:54.668  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHello()
+2018-08-02 15:55:54.670  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/{name}],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithURI(java.lang.String)
+2018-08-02 15:55:54.670  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/person],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithParam(java.lang.String)
+2018-08-02 15:55:54.671  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/consume],methods=[POST],consumes=[application/json]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloConsumes(java.lang.String)
+2018-08-02 15:55:54.671  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/produces/{name}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloProduces(java.lang.String)
+2018-08-02 15:55:54.671  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/output],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.outputLoggerFile()
+2018-08-02 15:55:54.672  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList()
+2018-08-02 15:55:54.675  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 15:55:54.676  INFO 21005 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 15:55:54.706  INFO 21005 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:55:54.706  INFO 21005 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 15:55:54.862  INFO 21005 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-02 15:55:54.957  INFO 21005 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/maikun'
+2018-08-02 15:55:54.965  INFO 21005 --- [main] com.training.maikun.Application          : Started Application in 3.624 seconds (JVM running for 4.873)
+2018-08-02 15:56:15.492  INFO 21005 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-02 15:56:15.492  INFO 21005 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-02 15:56:15.513  INFO 21005 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2018-08-02 15:56:28.811  INFO 21005 --- [Thread-11] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3bb9a3ff: startup date [Thu Aug 02 15:55:52 CST 2018]; root of context hierarchy
+2018-08-02 15:56:28.819  INFO 21005 --- [Thread-11] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-02 16:51:40.422  INFO 25246 --- [main] c.t.m.products.ProductControllerTest     : Starting ProductControllerTest on ChengdeMBP.lan with PID 25246 (started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-02 16:51:40.519  INFO 25246 --- [main] c.t.m.products.ProductControllerTest     : The following profiles are active: dev
+2018-08-02 16:51:40.555  INFO 25246 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 16:51:40 CST 2018]; root of context hierarchy
+2018-08-02 16:51:42.599  INFO 25246 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 16:51:42.926  INFO 25246 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 16:51:40 CST 2018]; root of context hierarchy
+2018-08-02 16:51:43.011  INFO 25246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList()
+2018-08-02 16:51:43.015  INFO 25246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 16:51:43.016  INFO 25246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 16:51:43.052  INFO 25246 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 16:51:43.052  INFO 25246 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 16:51:43.332  INFO 25246 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2018-08-02 16:51:43.332  INFO 25246 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2018-08-02 16:51:43.354  INFO 25246 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 22 ms
+2018-08-02 16:51:43.408  INFO 25246 --- [main] c.t.m.products.ProductControllerTest     : Started ProductControllerTest in 3.887 seconds (JVM running for 6.174)
+2018-08-02 16:51:43.669  INFO 25246 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 16:51:40 CST 2018]; root of context hierarchy
+2018-08-02 16:58:38.206  INFO 25772 --- [main] c.t.m.products.ProductControllerTest     : Starting ProductControllerTest on ChengdeMBP.lan with PID 25772 (started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-02 16:58:38.208  INFO 25772 --- [main] c.t.m.products.ProductControllerTest     : The following profiles are active: dev
+2018-08-02 16:58:38.254  INFO 25772 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 16:58:38 CST 2018]; root of context hierarchy
+2018-08-02 16:58:40.746  INFO 25772 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 16:58:41.029  INFO 25772 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 16:58:38 CST 2018]; root of context hierarchy
+2018-08-02 16:58:41.128  INFO 25772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList()
+2018-08-02 16:58:41.132  INFO 25772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 16:58:41.134  INFO 25772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 16:58:41.281  INFO 25772 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 16:58:41.281  INFO 25772 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 16:58:41.457  INFO 25772 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2018-08-02 16:58:41.520  INFO 25772 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2018-08-02 16:58:41.539  INFO 25772 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 19 ms
+2018-08-02 16:58:41.591  INFO 25772 --- [main] c.t.m.products.ProductControllerTest     : Started ProductControllerTest in 4.263 seconds (JVM running for 5.997)
+2018-08-02 16:58:41.839  INFO 25772 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 16:58:38 CST 2018]; root of context hierarchy
+2018-08-02 17:09:52.380  INFO 26626 --- [main] c.t.m.products.ProductControllerTest     : Starting ProductControllerTest on ChengdeMBP.lan with PID 26626 (started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-02 17:09:52.383  INFO 26626 --- [main] c.t.m.products.ProductControllerTest     : The following profiles are active: dev
+2018-08-02 17:09:52.422  INFO 26626 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 17:09:52 CST 2018]; root of context hierarchy
+2018-08-02 17:09:55.087  INFO 26626 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 17:09:55.442  INFO 26626 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 17:09:52 CST 2018]; root of context hierarchy
+2018-08-02 17:09:55.525  INFO 26626 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList()
+2018-08-02 17:09:55.532  INFO 26626 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-02 17:09:55.533  INFO 26626 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-02 17:09:55.567  INFO 26626 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 17:09:55.568  INFO 26626 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-02 17:09:55.800  INFO 26626 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2018-08-02 17:09:55.800  INFO 26626 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2018-08-02 17:09:55.816  INFO 26626 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 15 ms
+2018-08-02 17:09:55.867  INFO 26626 --- [main] c.t.m.products.ProductControllerTest     : Started ProductControllerTest in 4.72 seconds (JVM running for 6.184)
+2018-08-02 17:09:56.070  INFO 26626 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3b79fd76: startup date [Thu Aug 02 17:09:52 CST 2018]; root of context hierarchy

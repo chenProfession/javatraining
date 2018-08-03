@@ -26,7 +26,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/list")
+    @GetMapping(path = "/list")
     public ResultView getList() {
         /* 1. retrieve all the product */
 
