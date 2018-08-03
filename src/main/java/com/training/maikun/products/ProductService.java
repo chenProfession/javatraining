@@ -21,4 +21,5 @@ public interface ProductService {
     * @Date: 2018/8/1 上午5:15
     */
     List<ProductInfoView> findUpAll();
+
 }
