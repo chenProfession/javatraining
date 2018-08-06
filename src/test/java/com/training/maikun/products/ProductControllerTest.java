@@ -2,6 +2,8 @@ package com.training.maikun.products;
 
 
 import com.training.maikun.products.view.ProductInfoView;
+import com.training.maikun.products.view.ProductView;
+import com.training.maikun.result.ResultService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +38,8 @@ public class ProductControllerTest {
     public void getList() throws Exception {
         ProductInfoView productInfoViewOne = new ProductInfoView();
         ProductInfoView productInfoViewTwo = new ProductInfoView();
-        List<ProductInfoView> listProductView = new ArrayList();
+        List<ProductInfoView> listProductInfoView = new ArrayList();
+        List<ProductView> listProductView = new ArrayList();
 
         productInfoViewOne.setProductId("0001");
         productInfoViewOne.setProductName("credit card purchase");
@@ -50,10 +53,12 @@ public class ProductControllerTest {
         productInfoViewTwo.setProductDescription("This is a good product");
         productInfoViewTwo.setProductIcon("sample.jpg");
 
-        listProductView.add(productInfoViewOne);
-        listProductView.add(productInfoViewTwo);
+        listProductInfoView.add(productInfoViewOne);
+        listProductInfoView.add(productInfoViewTwo);
 
-        given(this.productService.findUpAll()).willReturn(listProductView);
+        given(this.productService.getTopTenProducts()).willReturn(10);
+        given(this.productService.getProductInfoViewList()).willReturn(listProductInfoView);
+        given(this.productService.getProductViewList(listProductInfoView)).willReturn(10);
 
         this.mvc.perform(get("/buyer/product/list").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andExpect(content().string(TEST_JSON));

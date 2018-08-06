@@ -1,5 +1,9 @@
 package com.training.maikun.result;
 
+import com.training.maikun.products.view.ProductView;
+
+import java.util.List;
+
 /**
  * @program: order
  * @Description: To implement the interface of ResultView Service
@@ -16,7 +20,7 @@ public class ResultViewImpl implements ResultService {
     * @Date: 2018/8/4 上午1:01
     */ 
     @Override
-    public ResultView getResultViewSuccess() {
+    public ResultView getResultViewSuccess(List<ProductView> productViewList) {
         return null;
     }
 
