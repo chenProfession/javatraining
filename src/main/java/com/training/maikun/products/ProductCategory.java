@@ -11,7 +11,7 @@ import java.util.Date;
  * @date: 2018/8/4 上午12:42
  */
 @Data
-public class productCategory {
+public class ProductCategory {
 
     /** product category id **/
     private String productCategoryId;

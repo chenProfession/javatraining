@@ -6,6 +6,7 @@ import com.training.maikun.result.ResultView;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @program: order
@@ -54,14 +55,14 @@ public class ProductServiceImpl implements ProductService{
     }
 
     /**
-     * @Description: To get the View of product Information
+     * @Description: To get the View of product Information by category
      * @Param: []
      * @return: java.util.List<com.training.maikun.products.view.ProductInfoView>
      * @Author: Mr.Cheng
      * @Date: 2018/8/7 上午2:00
      */
     @Override
-    public List<ProductInfoView> getProductInfoViewList() {
+    public Map<String,Object> getProductInfoViewMapByCategory() {
         return null;
     }
 
@@ -88,6 +89,18 @@ public class ProductServiceImpl implements ProductService{
      */
     @Override
     public ProductInfo getProductInfo(String productId) {
+        return null;
+    }
+
+    /**
+     * @Description: To get the category of the prodcut
+     * @Param: []
+     * @return: com.training.maikun.products.ProductCategory
+     * @Author: Mr.Cheng
+     * @Date: 2018/8/8 下午8:12
+     */
+    @Override
+    public List<ProductCategory> getProductCategory() {
         return null;
     }
 

@@ -5,6 +5,7 @@ import com.training.maikun.products.view.ProductView;
 import com.training.maikun.result.ResultView;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @program: order
@@ -43,13 +44,13 @@ public interface ProductService {
     List<ProductView> getProductViewList(List<ProductInfoView> productInfoViewList);
 
     /**
-    * @Description: To get the View of product Information
+    * @Description: To get the View of product Information by category, key = ProductInfo.categoryType
     * @Param: []
-    * @return: java.util.List<com.training.maikun.products.view.ProductInfoView>
+    * @return: java.util.Map<java.lang.String,com.training.maikun.products.view.ProductInfoView>
     * @Author: Mr.Cheng
-    * @Date: 2018/8/7 上午2:00
+    * @Date: 2018/8/9 上午12:41
     */ 
-    List<ProductInfoView> getProductInfoViewList();
+    Map<String,Object> getProductInfoViewMapByCategory();
 
     /**
     * @Description: To insert the details of product
@@ -68,4 +69,13 @@ public interface ProductService {
     * @Date: 2018/8/8 下午2:23
     */ 
     ProductInfo getProductInfo(String productId);
+
+    /**
+    * @Description: To get the category of the prodcut
+    * @Param: []
+    * @return: com.training.maikun.products.ProductCategory
+    * @Author: Mr.Cheng
+    * @Date: 2018/8/8 下午8:12
+    */
+    List<ProductCategory> getProductCategory();
 }
