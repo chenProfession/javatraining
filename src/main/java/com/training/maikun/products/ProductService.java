@@ -2,6 +2,7 @@ package com.training.maikun.products;
 
 import com.training.maikun.products.view.ProductInfoView;
 import com.training.maikun.products.view.ProductView;
+import com.training.maikun.result.ResultView;
 
 import java.util.List;
 
@@ -22,15 +23,6 @@ public interface ProductService {
     * @Date: 2018/8/1 上午5:15
     */
     List<ProductInfo> findUpAll();
-
-    /**
-    * @Description: To get the number of the products
-    * @Param: []
-    * @return: java.lang.Integer
-    * @Author: Mr.Cheng
-    * @Date: 2018/8/4 上午1:28
-    */ 
-    Integer getNumberOfProducts();
 
     /**
     * @Description: To get top ten products by ID
@@ -59,4 +51,21 @@ public interface ProductService {
     */ 
     List<ProductInfoView> getProductInfoViewList();
 
+    /**
+    * @Description: To insert the details of product
+    * @Param: [productInfo]
+    * @return: com.training.maikun.result.ResultView
+    * @Author: Mr.Cheng
+    * @Date: 2018/8/7 下午4:11
+    */ 
+    ResultView insertProductInfo(ProductInfo productInfo);
+
+    /**
+    * @Description:
+    * @Param: [productId]
+    * @return: com.training.maikun.products.ProductInfo
+    * @Author: Mr.Cheng
+    * @Date: 2018/8/8 下午2:23
+    */ 
+    ProductInfo getProductInfo(String productId);
 }

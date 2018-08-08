@@ -2,6 +2,7 @@ package com.training.maikun.products;
 
 import com.training.maikun.products.view.ProductInfoView;
 import com.training.maikun.products.view.ProductView;
+import com.training.maikun.result.ResultView;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,18 +25,6 @@ public class ProductServiceImpl implements ProductService{
     */ 
     @Override
     public List<ProductInfo> findUpAll() {
-        return null;
-    }
-
-    /**
-    * @Description: To get the number of products
-    * @Param: []
-    * @return: java.lang.Integer
-    * @Author: Mr.Cheng
-    * @Date: 2018/8/7 上午1:34
-    */ 
-    @Override
-    public Integer getNumberOfProducts() {
         return null;
     }
 
@@ -73,6 +62,32 @@ public class ProductServiceImpl implements ProductService{
      */
     @Override
     public List<ProductInfoView> getProductInfoViewList() {
+        return null;
+    }
+
+    /**
+     * @param productInfo
+     * @Description: To insert the details of product
+     * @Param: [productInfo]
+     * @return: com.training.maikun.result.ResultView
+     * @Author: Mr.Cheng
+     * @Date: 2018/8/7 下午4:11
+     */
+    @Override
+    public ResultView insertProductInfo(ProductInfo productInfo) {
+        return null;
+    }
+
+    /**
+     * @param productId
+     * @Description:
+     * @Param: [productId]
+     * @return: com.training.maikun.products.ProductInfo
+     * @Author: Mr.Cheng
+     * @Date: 2018/8/8 上午10:08
+     */
+    @Override
+    public ProductInfo getProductInfo(String productId) {
         return null;
     }
 

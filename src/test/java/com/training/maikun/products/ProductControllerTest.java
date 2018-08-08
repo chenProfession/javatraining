@@ -1,67 +1,73 @@
 package com.training.maikun.products;
 
-
-import com.training.maikun.products.view.ProductInfoView;
-import com.training.maikun.products.view.ProductView;
 import com.training.maikun.result.ResultService;
+import com.training.maikun.util.DataMaker;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(ProductController.class)
+@Slf4j
 public class ProductControllerTest {
-
-    private static final String TEST_JSON = "{\"code\":0,\"msg\":\"Success\",\"data\":{\"name\":\"Week in Search\",\"type\":1,\"finance products\":[{\"id\":\"0001\",\"name\":\"credit card purchase\",\"price\":2000,\"description\":\"This is a good product\",\"icon\":\"sample.jpg\"},{\"id\":\"0002\",\"name\":\"gold credit card purchase\",\"price\":3000,\"description\":\"This is a good product\",\"icon\":\"sample.jpg\"}]}}";
-
-    @Autowired
-    private MockMvc mvc;
 
     @MockBean
     private ProductService productService;
 
+    @MockBean
+    private ResultService resultService;
+
+    @Autowired
+    private MockMvc mvc;
+
     @Test
     public void getList() throws Exception {
-        ProductInfoView productInfoViewOne = new ProductInfoView();
-        ProductInfoView productInfoViewTwo = new ProductInfoView();
-        List<ProductInfoView> listProductInfoView = new ArrayList();
-        List<ProductView> listProductView = new ArrayList();
 
-        productInfoViewOne.setProductId("0001");
-        productInfoViewOne.setProductName("credit card purchase");
-        productInfoViewOne.setProductPrice(new BigDecimal(2000.00));
-        productInfoViewOne.setProductDescription("This is a good product");
-        productInfoViewOne.setProductIcon("sample.jpg");
+        given(productService.getTopTenProducts()).willReturn(10);
+        given(resultService.getResultViewSuccess()).willReturn(DataMaker.makeResultViewSuccess());
 
-        productInfoViewTwo.setProductId("0002");
-        productInfoViewTwo.setProductName("gold credit card purchase");
-        productInfoViewTwo.setProductPrice(new BigDecimal(3000.00));
-        productInfoViewTwo.setProductDescription("This is a good product");
-        productInfoViewTwo.setProductIcon("sample.jpg");
+        String result = this.mvc.perform(get("/buyer/product/list"))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+        log.info(result);
+    }
 
-        listProductInfoView.add(productInfoViewOne);
-        listProductInfoView.add(productInfoViewTwo);
+    @Test
+    public void getListFail() throws Exception {
+        given(resultService.getResultViewFail()).willReturn(DataMaker.makeResultViewFail());
 
-        given(this.productService.getTopTenProducts()).willReturn(10);
-        given(this.productService.getProductInfoViewList()).willReturn(listProductInfoView);
-        given(this.productService.getProductViewList(listProductInfoView)).willReturn(10);
+        String result = this.mvc.perform(get("/buyer/product/list"))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+        log.info(result);
 
-        this.mvc.perform(get("/buyer/product/list").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk()).andExpect(content().string(TEST_JSON));
+    }
+
+    @Test
+    public void insertProduct() throws Exception {
+    }
+
+    @Test
+    public void getProductInfo() throws Exception {
+
+        given(productService.getProductInfo(anyString())).willReturn(DataMaker.makeProductInfo());
+
+        String result = this.mvc.perform(get("/buyer/product/get-product-info")
+                          .param("productId","number-one"))
+                          .andExpect(status().isOk())
+                          .andReturn().getResponse().getContentAsString();
+        log.info(result);
     }
 
 }

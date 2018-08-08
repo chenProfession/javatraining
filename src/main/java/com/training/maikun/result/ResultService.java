@@ -1,8 +1,6 @@
 package com.training.maikun.result;
 
-import com.training.maikun.products.view.ProductView;
 
-import java.util.List;
 
 public interface ResultService {
 
@@ -12,8 +10,8 @@ public interface ResultService {
     * @return: com.training.maikun.result.ResultView
     * @Author: Mr.Cheng
     * @Date: 2018/8/3 下午5:31
-    */ 
-    ResultView getResultViewSuccess(List<ProductView> productViewList);
+    */
+    ResultView getResultViewSuccess();
 
     /**
     * @Description: to make the ResultView fail
