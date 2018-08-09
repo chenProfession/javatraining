@@ -32,13 +32,13 @@ public class ResultServiceImpl implements ResultService {
      * @Date: 2018/8/3 下午5:31
      */
     @Override
-    public ResultView getResultViewSuccess() {
+    public ResultView getResultViewProductSuccess() {
         /** retrieve the product info and product category **/
         List<ProductCategory> productCategoryList = productService.getProductCategory();
 
         /** the key of the map is category id and the value of the map is the list of product **/
         Map<String,Object> productInfoViewMapByCategory = productService.getProductInfoViewMapByCategory();
-
+        // List<ProductInfo>
         /** make the Product View data **/
         List<ProductView> productViewList = new ArrayList();
         Iterator<ProductCategory> iteratorCategory = productCategoryList.iterator();
@@ -68,7 +68,7 @@ public class ResultServiceImpl implements ResultService {
      * @Date: 2018/8/4 上午12:58
      */
     @Override
-    public ResultView getResultViewFail() {
+    public ResultView getResultViewProductFail() {
 
         /** make the result view **/
         ResultView resultView = new ResultView();
@@ -77,5 +77,36 @@ public class ResultServiceImpl implements ResultService {
         resultView.setData(ResultEnum.PARAM_ERROR.getMessage());
 
         return resultView;
+    }
+
+    /**
+     * @Description:
+     * @Param: []
+     * @return: com.training.maikun.result.ResultView
+     * @Author: Mr.Cheng
+     * @Date: 2018/8/9 上午4:29
+     */
+    @Override
+    public ResultView getResultViewRegisterSuccess() {
+
+        /** make the result view **/
+        ResultView resultView = new ResultView();
+        resultView.setCode(26);
+        resultView.setMsg(ResultEnum.REGISTER_SUCCESS.getMessage());
+        resultView.setData(ResultEnum.SUCCESS.getMessage());
+
+        return resultView;
+    }
+
+    /**
+     * @Description:
+     * @Param: []
+     * @return: com.training.maikun.result.ResultView
+     * @Author: Mr.Cheng
+     * @Date: 2018/8/9 上午4:29
+     */
+    @Override
+    public ResultView getResultViewRegisterFail() {
+        return null;
     }
 }

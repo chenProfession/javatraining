@@ -50,13 +50,16 @@
 			<classifier>jdk15</classifier>
 			<scope>test</scope>
 		</dependency>
-		<!-- ... spring security dependency ...
+		<!-- spring-security 和 jwt -->
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-			<version>5.0.7.RELEASE</version>
-		</dependency>  -->
-
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.6.0</version>
+		</dependency>
 	</dependencies>
 
 	<scm>

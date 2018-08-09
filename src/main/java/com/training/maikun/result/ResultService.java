@@ -11,7 +11,7 @@ public interface ResultService {
     * @Author: Mr.Cheng
     * @Date: 2018/8/3 下午5:31
     */
-    ResultView getResultViewSuccess();
+    ResultView getResultViewProductSuccess();
 
     /**
     * @Description: to make the ResultView fail
@@ -20,5 +20,23 @@ public interface ResultService {
     * @Author: Mr.Cheng
     * @Date: 2018/8/4 上午12:58
     */ 
-    ResultView getResultViewFail();
+    ResultView getResultViewProductFail();
+
+    /**
+    * @Description:
+    * @Param: []
+    * @return: com.training.maikun.result.ResultView
+    * @Author: Mr.Cheng
+    * @Date: 2018/8/9 上午4:29
+    */ 
+    ResultView getResultViewRegisterSuccess();
+
+    /**
+    * @Description: 
+    * @Param: []
+    * @return: com.training.maikun.result.ResultView
+    * @Author: Mr.Cheng
+    * @Date: 2018/8/9 上午4:29
+    */ 
+    ResultView getResultViewRegisterFail();
 }

@@ -39,7 +39,7 @@ public class ProductControllerTest {
     public void getListSuccess() throws Exception {
 
         given(productService.getTopTenProducts()).willReturn(10);
-        given(resultService.getResultViewSuccess()).willReturn(DataMaker.makeResultViewSuccess());
+        given(resultService.getResultViewProductSuccess()).willReturn(DataMaker.makeResultViewSuccess());
 
         String result = this.mvc.perform(get("/buyer/product/list"))
                 .andExpect(status().isOk())
@@ -49,7 +49,7 @@ public class ProductControllerTest {
 
     @Test
     public void getListFail() throws Exception {
-        given(resultService.getResultViewFail()).willReturn(DataMaker.makeResultViewFail());
+        given(resultService.getResultViewProductFail()).willReturn(DataMaker.makeResultViewFail());
 
         String result = this.mvc.perform(get("/buyer/product/list"))
                 .andExpect(status().isOk())

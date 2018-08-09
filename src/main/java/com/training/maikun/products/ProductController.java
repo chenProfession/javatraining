@@ -35,9 +35,9 @@ public class ProductController {
         /* 1. retrieve all the product */
         if(productService.getTopTenProducts() > 0){
             log.info("success");
-            return resultService.getResultViewSuccess();
+            return resultService.getResultViewProductSuccess();
         }
-        return resultService.getResultViewFail();
+        return resultService.getResultViewProductFail();
     }
 
     /**
