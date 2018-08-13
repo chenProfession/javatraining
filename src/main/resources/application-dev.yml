@@ -6,3 +6,18 @@ logging:
   file: /Volumes/MyPassport/minprogram/order/ordering.log
   level:
      com.training.maikun.hello.HelloWorldController: debug
+
+spring:
+  datasource:
+    type:
+    url: jdbc:mysql://127.0.0.1:3306/vhr?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123
+
+# JWT 认证配置
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 604800 #token七天不过期
+  tokenHead: "Bearer "
+  exceptUrl: "/auth/**"

@@ -9,6 +9,9 @@ import java.io.*;
  * @date: 2018/8/9 上午2:57
  */
 public class ReadFileToString {
+
+    public final static String basicPath = "/Volumes/MyPassport/minprogram/order/src/test/java/com/training/maikun/result/sample";
+
     public static String LoadContentByPath(String path) throws IOException {
         InputStream is = new FileInputStream(path);
         BufferedReader in = new BufferedReader(new InputStreamReader(is));

@@ -1,6 +1,8 @@
 package com.training.maikun.hello;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +29,7 @@ public class HelloWorldController {
     * @Date: 2018/7/29 上午1:16
     */
     @GetMapping(path = "/sayhello")
+    @PreAuthorize("hasRole('ADMIN')")
     public String sayHello(){
         log.info(String.format(STATUS,"info"));
         log.debug(String.format(STATUS,"debug"));
