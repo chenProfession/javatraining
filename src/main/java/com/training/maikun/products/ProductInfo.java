@@ -2,6 +2,7 @@ package com.training.maikun.products;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
