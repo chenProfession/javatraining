@@ -12,6 +12,7 @@ import java.util.Date;
  * @date: 2018/8/1 上午5:16
  */
 @Data
+@Entity
 public class ProductInfo {
 
     private String productId;

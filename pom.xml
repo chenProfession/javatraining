@@ -50,6 +50,7 @@
 			<classifier>jdk15</classifier>
 			<scope>test</scope>
 		</dependency>
+		<!-- spring JPA -->
 		<!-- ... spring security dependency ...
 		<dependency>
 			<groupId>org.springframework.security</groupId>
