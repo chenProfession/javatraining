@@ -6,6 +6,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * @program: order
  * @Description: Say hello to test program
@@ -18,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class HelloWorldController {
 
-    private final String TEST_WORDS = "Demo for Restful Web Service, welcome %s !";
+    private final String TEST_WORDS = "{'content':'Demo for Restful Web Service, welcome %s !'}";
     private static final String STATUS = "I have written a log file,the level is %s !";
 
     /**
@@ -30,11 +32,13 @@ public class HelloWorldController {
     */
     @GetMapping(path = "/sayhello")
     @PreAuthorize("hasRole('ADMIN')")
-    public String sayHello(){
+    public String sayHello(HttpServletResponse response){
         log.info(String.format(STATUS,"info"));
         log.debug(String.format(STATUS,"debug"));
         log.warn(String.format(STATUS,"warn"));
         log.error(String.format(STATUS,"error"));
+        response.addHeader("Access-Control-Allow-Origin", "*");
+        response.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         return String.format(TEST_WORDS,"everyone");
     }
 
