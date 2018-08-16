@@ -6,3 +6,16 @@ logging:
   file: /Volumes/MyPassport/minprogram/order/ordering.log
   level:
      com.training.maikun.hello.HelloWorldController: debug
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jackson:
+      default-property-inclusion: non_null
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: chen
+      password: hsbc
+      url: jdbc:mysql://193.112.35.196:3306/ordersys?characterEncoding=utf-8&useSSL=false

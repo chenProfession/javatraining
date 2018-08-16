@@ -50,7 +50,7 @@ public interface ProductService {
     * @Author: Mr.Cheng
     * @Date: 2018/8/9 上午12:41
     */ 
-    Map<String,Object> getProductInfoViewMapByCategory();
+    Map<Integer,Object> getProductInfoViewMapByCategory();
 
     /**
     * @Description: To insert the details of product

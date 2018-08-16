@@ -37,7 +37,7 @@ public class ResultServiceImpl implements ResultService {
         List<ProductCategory> productCategoryList = productService.getProductCategory();
 
         /** the key of the map is category id and the value of the map is the list of product **/
-        Map<String,Object> productInfoViewMapByCategory = productService.getProductInfoViewMapByCategory();
+        Map<Integer,Object> productInfoViewMapByCategory = productService.getProductInfoViewMapByCategory();
 
         /** make the Product View data **/
         List<ProductView> productViewList = new ArrayList();
@@ -47,7 +47,7 @@ public class ResultServiceImpl implements ResultService {
             ProductView productView = new ProductView();
             productView.setCategoryName(item.getProductCategoryName());
             productView.setCategoryType(item.getProductCategoryType());
-            productView.setProductInfoViewList((List<ProductInfoView>) productInfoViewMapByCategory.get(item.getProductCategoryId()));
+            productView.setProductInfoViewList((List<ProductInfoView>) productInfoViewMapByCategory.get(item.getCategoryId()));
             productViewList.add(productView);
         }
 

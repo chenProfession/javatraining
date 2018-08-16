@@ -1,12 +1,14 @@
 package com.training.maikun.products;
 
+import com.training.maikun.enums.ResultEnum;
 import com.training.maikun.products.view.ProductInfoView;
 import com.training.maikun.products.view.ProductView;
 import com.training.maikun.result.ResultView;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @program: order
@@ -17,6 +19,12 @@ import java.util.Map;
 @Service
 public class ProductServiceImpl implements ProductService{
 
+    @Autowired
+    private ProductRepository productRepository;
+
+    @Autowired
+    private ProductCategoryRepository productCategoryRepository;
+
     /**
     * @Description: implement the function of findupall
     * @Param: []
@@ -26,7 +34,7 @@ public class ProductServiceImpl implements ProductService{
     */ 
     @Override
     public List<ProductInfo> findUpAll() {
-        return null;
+        return productRepository.findAll();
     }
 
     /**
@@ -38,7 +46,7 @@ public class ProductServiceImpl implements ProductService{
      */
     @Override
     public int getTopTenProducts() {
-        return 0;
+        return (int)productRepository.count();
     }
 
     /**
@@ -62,8 +70,31 @@ public class ProductServiceImpl implements ProductService{
      * @Date: 2018/8/7 上午2:00
      */
     @Override
-    public Map<String,Object> getProductInfoViewMapByCategory() {
-        return null;
+    public Map<Integer,Object> getProductInfoViewMapByCategory() {
+        Map<Integer,Object> productInfoViewMapByCategory = new HashMap<>();
+        List<ProductCategory> productCategoryList = productCategoryRepository.findAll();
+
+        Iterator<ProductCategory> iteratorCategory = productCategoryList.iterator();
+        while (iteratorCategory.hasNext()) {
+
+            ProductCategory item = iteratorCategory.next();
+            List<ProductInfoView> productInfoViewList = new ArrayList<>();
+            List<ProductInfo> productInfoList = productRepository.findByCategoryType(item.getProductCategoryType());
+
+            Iterator<ProductInfo> iteratorProductInfo = productInfoList.iterator();
+            while(iteratorProductInfo.hasNext()){
+                ProductInfo itemProductInfo = iteratorProductInfo.next();
+                ProductInfoView productInfoView = new ProductInfoView();
+                productInfoView.setProductId(itemProductInfo.getProductId());
+                productInfoView.setProductName(itemProductInfo.getProductName());
+                productInfoView.setProductPrice(itemProductInfo.getProductPrice());
+                productInfoView.setProductIcon(itemProductInfo.getProductIcon());
+                productInfoView.setProductDescription(itemProductInfo.getProductDescription());
+                productInfoViewList.add(productInfoView);
+            }
+            productInfoViewMapByCategory.put(item.getCategoryId(),productInfoViewList);
+        }
+        return productInfoViewMapByCategory;
     }
 
     /**
@@ -75,8 +106,22 @@ public class ProductServiceImpl implements ProductService{
      * @Date: 2018/8/7 下午4:11
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResultView insertProductInfo(ProductInfo productInfo) {
-        return null;
+        productInfo = productRepository.findByProductId(productInfo.getProductId());
+        ResultView resultView = new ResultView();
+        if(productInfo == null){
+            productRepository.saveAndFlush(productInfo);
+            resultView.setCode(27);
+            resultView.setMsg(ResultEnum.PRODUCT_CREATE_SUCCESS.getMessage());
+            resultView.setData("you have added a product !");
+        }else {
+            resultView.setCode(28);
+            resultView.setMsg(ResultEnum.PRODUCT_CREATE_ERROR.getMessage());
+            resultView.setData("cannot added a product !");
+        }
+
+        return resultView;
     }
 
     /**
@@ -89,7 +134,7 @@ public class ProductServiceImpl implements ProductService{
      */
     @Override
     public ProductInfo getProductInfo(String productId) {
-        return null;
+        return productRepository.findByProductId(productId);
     }
 
     /**
@@ -101,7 +146,7 @@ public class ProductServiceImpl implements ProductService{
      */
     @Override
     public List<ProductCategory> getProductCategory() {
-        return null;
+        return productCategoryRepository.findAll();
     }
 
 }

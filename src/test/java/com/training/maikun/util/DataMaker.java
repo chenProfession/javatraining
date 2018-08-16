@@ -57,12 +57,13 @@ public class DataMaker {
 
     public static ProductInfo makeProductInfo(){
         ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductName("Hello");
+        productInfo.setProductId("test-third");
+        productInfo.setProductName("Hello-third");
         productInfo.setProductPrice(new BigDecimal(2000.00));
         productInfo.setProductDescription("this is the best product");
         productInfo.setProductStatus(0);
         productInfo.setProductStock(11);
-        productInfo.setCategoryType(0);
+        productInfo.setCategoryType(22);
         productInfo.setProductStatus(1);
         return  productInfo;
     }
@@ -86,14 +87,14 @@ public class DataMaker {
     public static List<ProductCategory> makeProductCategoryList(){
         List<ProductCategory> productCategoryList = new ArrayList();
         ProductCategory productCategoryOne = new ProductCategory();
-        productCategoryOne.setProductCategoryId("sample-one");
+        productCategoryOne.setProductCategoryType(11);
         productCategoryOne.setProductCategoryName("category-one");
-        productCategoryOne.setProductCategoryType(0);
+        //productCategoryOne.setProductCategoryType(0);
 
         ProductCategory productCategoryTwo = new ProductCategory();
-        productCategoryTwo.setProductCategoryId("sample-two");
+        productCategoryTwo.setProductCategoryType(22);
         productCategoryTwo.setProductCategoryName("category-two");
-        productCategoryTwo.setProductCategoryType(1);
+        //productCategoryTwo.setProductCategoryType(1);
 
         productCategoryList.add(productCategoryOne);
         productCategoryList.add(productCategoryTwo);
@@ -101,9 +102,9 @@ public class DataMaker {
         return productCategoryList;
     }
 
-    public static Map<String,Object> makeProductInfoViewByCategory(){
+    public static Map<Integer,Object> makeProductInfoViewByCategory(){
 
-        Map<String,Object> productByCategoryMap = new HashMap<>();
+        Map<Integer,Object> productByCategoryMap = new HashMap<>();
         ProductInfoView productInfoViewOne = new ProductInfoView();
         ProductInfoView productInfoViewTwo = new ProductInfoView();
         List<ProductInfoView> listProductInfoView = new ArrayList();
@@ -123,7 +124,7 @@ public class DataMaker {
         listProductInfoView.add(productInfoViewOne);
         listProductInfoView.add(productInfoViewTwo);
 
-        productByCategoryMap.put("sample-one",listProductInfoView);
+        productByCategoryMap.put(111,listProductInfoView);
 
         ProductInfoView productInfoViewThree = new ProductInfoView();
         ProductInfoView productInfoViewFour = new ProductInfoView();
@@ -144,7 +145,7 @@ public class DataMaker {
         listProductInfoViewNext.add(productInfoViewOne);
         listProductInfoViewNext.add(productInfoViewTwo);
 
-        productByCategoryMap.put("sample-two",listProductInfoViewNext);
+        productByCategoryMap.put(222,listProductInfoViewNext);
 
         return productByCategoryMap;
     }

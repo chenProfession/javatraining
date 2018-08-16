@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 /**
  * @program: order
  * @Description: Say hello to test program
@@ -33,6 +36,21 @@ public class HelloWorldController {
         log.warn(String.format(STATUS,"warn"));
         log.error(String.format(STATUS,"error"));
         return String.format(TEST_WORDS,"everyone");
+    }
+
+    @GetMapping(path = "/sayhi")
+    public String sayHi(HttpServletRequest request){
+        HttpSession session = request.getSession(true);
+        String sessionId = session.getId();
+        session.setAttribute("test",sessionId);
+        return String.format(TEST_WORDS,sessionId);
+    }
+
+    @PostMapping(path = "/sayPost")
+    public String sayPost(@RequestParam("sayId") String post,HttpServletRequest request){
+        String sessionId = request.getSession(true).getId();
+        log.info(sessionId);
+        return String.format(TEST_WORDS,post);
     }
 
     /**
