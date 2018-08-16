@@ -5,6 +5,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -47,9 +48,10 @@ public class HelloWorldController {
     }
 
     @PostMapping(path = "/sayPost")
-    public String sayPost(@RequestParam("sayId") String post,HttpServletRequest request){
+    public String sayPost(@RequestParam("sayId") String post, HttpServletRequest request, HttpServletResponse response){
         String sessionId = request.getSession(true).getId();
         log.info(sessionId);
+        response.setHeader("Access-Control-Allow-Origin", "*");
         return String.format(TEST_WORDS,post);
     }
 

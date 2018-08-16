@@ -108,9 +108,9 @@ public class ProductServiceImpl implements ProductService{
     @Override
     @Transactional(rollbackFor = Exception.class)
     public ResultView insertProductInfo(ProductInfo productInfo) {
-        productInfo = productRepository.findByProductId(productInfo.getProductId());
+        ProductInfo productInfoTemp = productRepository.findByProductId(productInfo.getProductId());
         ResultView resultView = new ResultView();
-        if(productInfo == null){
+        if(productInfoTemp == null){
             productRepository.saveAndFlush(productInfo);
             resultView.setCode(27);
             resultView.setMsg(ResultEnum.PRODUCT_CREATE_SUCCESS.getMessage());
