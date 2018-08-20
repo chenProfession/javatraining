@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/angular.js/1.6.3/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="siteCtrl"> 
+
+<ul>
+  <li>
+    {{ names.productName }}
+  </li>
+  <li>
+    {{ names.productPrice }}
+  </li>
+  <li>
+    {{ names.productStock }}
+  </li>
+  <li>
+    {{ names.productDescription }}
+  </li>
+  <li>
+    <img src="{{ names.productIcon }}" alt="HSBC Premier Debit Card">
+  </li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+	
+app.controller('siteCtrl', function($scope, $http, $location) {
+	var str = location.href;
+  var num = str.indexOf("?");
+  str = str.substr(num + 1);
+  
+	$http({
+		method: 'GET',
+		url: 'http://localhost:8080/maikun/buyer/product/get-product-info',
+		params: {
+					"productId":str
+				}
+	}).then(function successCallback(response) {
+			$scope.names = response.data;
+		}, function errorCallback(response) {
+			$scope.names = response;
+			// 请求失败执行代码
+	});
+  
+});
+</script>
+
+</body>
+</html>

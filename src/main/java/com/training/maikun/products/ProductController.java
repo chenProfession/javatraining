@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * @program: order
  * @Description: To show buyer the list of product
@@ -31,8 +33,9 @@ public class ProductController {
     * @Date: 2018/8/8 下午4:39
     */ 
     @GetMapping("/list")
-    public ResultView getList() {
+    public ResultView getList(HttpServletResponse response) {
         /* 1. retrieve all the product */
+        response.setHeader("Access-Control-Allow-Origin", "*");
         if(productService.getTopTenProducts() > 0){
             log.info("success");
             return resultService.getResultViewSuccess();
@@ -48,7 +51,8 @@ public class ProductController {
     * @Date: 2018/8/7 下午4:09
     */ 
     @PostMapping(path = "/insert")
-    public ResultView insertProduct(@RequestBody ProductInfo productInfo){
+    public ResultView insertProduct(@RequestBody ProductInfo productInfo,HttpServletResponse response){
+        response.setHeader("Access-Control-Allow-Origin", "*");
         return productService.insertProductInfo(productInfo);
     }
 
@@ -60,7 +64,8 @@ public class ProductController {
     * @Date: 2018/8/8 下午4:40
     */ 
     @GetMapping(path = "/get-product-info")
-    public ProductInfo getProductInfo(@RequestParam(value = "productId",defaultValue = "number-one") String productId) {
+    public ProductInfo getProductInfo(@RequestParam(value = "productId",defaultValue = "number-one") String productId,HttpServletResponse response) {
+        response.setHeader("Access-Control-Allow-Origin", "*");
         return productService.getProductInfo(productId);
     }
 }

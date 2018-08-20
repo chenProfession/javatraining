@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular-route.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="siteCtrl"> 
+
+<ul>
+  <li ng-repeat="x in names">
+   {{ x }}
+   <ul>
+     <li ng-repeat="y in x.financeProducts">
+     	{{ y.id }}
+     	<p>
+     		<a href="productdetail.html?{{y.id}}" ng-cloak >{{y.name}}</a>
+     	</p>
+     </li>
+    </ul>
+  </li>
+  
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+	
+app.controller('siteCtrl', function($scope, $http) {
+	$http({
+		method: 'GET',
+		url: 'http://localhost:8080/maikun/buyer/product/list',
+		headers: {
+        'Content-type':'application/json;charset=utf-8'  
+    }
+	}).then(function successCallback(response) {
+			$scope.names = response.data.data;
+		}, function errorCallback(response) {
+			// 请求失败执行代码
+			$scope.names = response;
+	});
+  
+});
+</script>
+
+</body>
+</html>

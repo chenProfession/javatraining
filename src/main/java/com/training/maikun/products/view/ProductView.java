@@ -20,7 +20,7 @@ public class ProductView {
     @JsonProperty("type")
     private Integer categoryType;
 
-    @JsonProperty("finance products")
+    @JsonProperty("financeProducts")
     private List<ProductInfoView> productInfoViewList;
 
 }

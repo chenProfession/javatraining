@@ -1,8 +1,10 @@
 package com.training.maikun.hello;
 
+import com.training.maikun.result.ResultView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.WebUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,11 +42,32 @@ public class HelloWorldController {
     }
 
     @GetMapping(path = "/sayhi")
-    public String sayHi(HttpServletRequest request){
+    public ResultView sayHi(HttpServletRequest request,HttpServletResponse response){
+
         HttpSession session = request.getSession(true);
         String sessionId = session.getId();
         session.setAttribute("test",sessionId);
-        return String.format(TEST_WORDS,sessionId);
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
+        ResultView resultView = new ResultView();
+        resultView.setCode(0);
+        resultView.setMsg(String.format(TEST_WORDS,sessionId));
+
+        return resultView;
+    }
+
+    @GetMapping(path = "/login")
+    public ResultView login(HttpServletRequest request){
+        HttpSession session = request.getSession(false);
+        String sessionValue = "null";
+        if (session != null) {
+            sessionValue = session.getAttribute("test").toString();
+        }
+        ResultView resultView = new ResultView();
+        resultView.setCode(1);
+        resultView.setMsg("login success!" + sessionValue +"-----");
+
+        return resultView;
     }
 
     @PostMapping(path = "/sayPost")
