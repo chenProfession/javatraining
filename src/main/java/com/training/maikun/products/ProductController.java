@@ -38,9 +38,9 @@ public class ProductController {
         response.setHeader("Access-Control-Allow-Origin", "*");
         if(productService.getTopTenProducts() > 0){
             log.info("success");
-            return resultService.getResultViewSuccess();
+            return resultService.getResultViewProductSuccess();
         }
-        return resultService.getResultViewFail();
+        return resultService.getResultViewProductFail();
     }
 
     /**

@@ -46,13 +46,15 @@ public enum ResultEnum {
 
     PRODUCT_STATUS_ERROR(24, "商品状态不正确"),
 
-    LOGIN_FAIL(25, "登录失败, 登录信息不正确"),
-
-    LOGOUT_SUCCESS(26, "登出成功"),
+    LOGIN_FAIL(25, "login failed, username or password is incorrect"),
 
     PRODUCT_CREATE_SUCCESS(27, "crate product successfully"),
 
     PRODUCT_CREATE_ERROR(28, "crate product failed"),
+
+    LOGOUT_SUCCESS(26, "logout success"),
+
+    REGISTER_SUCCESS(29, "register success")
     ;
 
     private Integer code;

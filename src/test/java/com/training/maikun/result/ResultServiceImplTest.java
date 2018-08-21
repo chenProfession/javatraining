@@ -32,7 +32,7 @@ public class ResultServiceImplTest {
         given(this.productService.getProductCategory()).willReturn(DataMaker.makeProductCategoryList());
         given(this.productService.getProductInfoViewMapByCategory()).willReturn(DataMaker.makeProductInfoViewByCategory());
 
-        ResultView resultView = resultService.getResultViewSuccess();
+        ResultView resultView = resultService.getResultViewProductSuccess();
         JSONObject json = JSONObject.fromObject(resultView);
         //Assert.assertEquals(json.toString(), ReadFileToString.LoadContentByPath("./sample/json.txt"));
         log.info(json.toString());
@@ -42,7 +42,7 @@ public class ResultServiceImplTest {
     public void getResultViewFail() throws Exception {
         String msg = "{\"code\":10,\"data\":\"incorrect parameter\",\"msg\":\"Product does not exist\"}";
         ResultServiceImpl resultService = new ResultServiceImpl();
-        ResultView resultView = resultService.getResultViewFail();
+        ResultView resultView = resultService.getResultViewProductFail();
         JSONObject json = JSONObject.fromObject(resultView);
         Assert.assertEquals(json.toString(),msg);
         log.info(json.toString());

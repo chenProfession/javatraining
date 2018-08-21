@@ -2,6 +2,8 @@ package com.training.maikun.hello;
 
 import com.training.maikun.result.ResultView;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.WebUtils;
@@ -10,6 +12,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @program: order
@@ -23,7 +27,7 @@ import javax.servlet.http.HttpSession;
 @Slf4j
 public class HelloWorldController {
 
-    private final String TEST_WORDS = "Demo for Restful Web Service, welcome %s !";
+    private final String TEST_WORDS = "{'content':'Demo for Restful Web Service, welcome %s !'}";
     private static final String STATUS = "I have written a log file,the level is %s !";
 
     /**
@@ -34,11 +38,14 @@ public class HelloWorldController {
     * @Date: 2018/7/29 上午1:16
     */
     @GetMapping(path = "/sayhello")
-    public String sayHello(){
+    @PreAuthorize("hasRole('ADMIN')")
+    public String sayHello(HttpServletResponse response){
         log.info(String.format(STATUS,"info"));
         log.debug(String.format(STATUS,"debug"));
         log.warn(String.format(STATUS,"warn"));
         log.error(String.format(STATUS,"error"));
+        response.addHeader("Access-Control-Allow-Origin", "*");
+        response.addHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         return String.format(TEST_WORDS,"everyone");
     }
 
