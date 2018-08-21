@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular.min.js"></script>
+
+<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular-cookies.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+
+​
+
+<div  ng-controller="siteCtrl"> 
+
+    <h1>hii : {{names}}</h1>
+     <h1>hii : {{ koos }}</h1>
+     <h1>hii : {{ koosd }}</h1>
+    
+    <a href="http://localhost:8080/maikun/hello/login">click me</a>
+
+</div>
+
+<div ng-controller="ExampleController">
+        <h1>hii : {{ koo }}</h1>
+    </div>
+
+​
+
+<script>
+
+var app = angular.module('myApp', ['ngCookies']);
+
+    
+
+app.controller('siteCtrl', function($scope, $http, $cookies) {
+
+    $http({
+
+        method: 'GET',
+
+        url: 'http://localhost:8080/maikun/hello/sayhi',
+
+        withCredentials: true
+
+    }).then(function successCallback(response) {
+
+            $scope.names = response.data.msg;
+            $scope.koos = $cookies.get('cookieTest');
+            $scope.koosd = response.headers; 
+            //window.location = 'http://localhost:8080/maikun/hello/login';
+
+        }, function errorCallback(response) {
+        	$scope.names = "error: " + response;
+           // 请求失败执行代码
+    });
+
+});
+
+app.controller('ExampleController', function($scope,$cookies) {
+         // Retrieving a cookie
+         $cookies.put('myFavorite', 'oatmeal');
+         //$scope.koo = $cookies.get('myFavorite');  
+         $scope.koo = $cookies.get('myFavorite');     
+         // Setting a cookie
+         //$scope.koo = "iiii";
+       });
+
+
+</script>
+
+​
+
+</body>
+
+</html>
+

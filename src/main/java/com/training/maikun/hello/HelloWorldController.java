@@ -6,6 +6,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.WebUtils;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -47,7 +48,11 @@ public class HelloWorldController {
         HttpSession session = request.getSession(true);
         String sessionId = session.getId();
         session.setAttribute("test",sessionId);
-        response.setHeader("Access-Control-Allow-Origin", "*");
+
+        String origin = request.getHeader("Referer");
+        response.setHeader("Access-Control-Allow-Origin", origin);
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.addCookie(new Cookie("cookieTest","missYouALot"));
 
         ResultView resultView = new ResultView();
         resultView.setCode(0);
