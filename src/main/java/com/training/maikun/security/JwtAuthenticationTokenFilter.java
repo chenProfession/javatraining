@@ -57,12 +57,13 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         log.info("i am starting to work");
 
         /** testing **/
-        UserDetails userDetailsTest = this.userDetailsService.loadUserByUsername("test");
-        UsernamePasswordAuthenticationToken authenticationTest = new UsernamePasswordAuthenticationToken(userDetailsTest, null, userDetailsTest.getAuthorities());
-        authenticationTest.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-        logger.info("authenticated user :" + "test" + ", setting security context:" + authenticationTest);
-        SecurityContextHolder.getContext().setAuthentication(authenticationTest);
-        /** --------- **/
+//        UserDetails userDetailsTest = this.userDetailsService.loadUserByUsername("test");
+//        UsernamePasswordAuthenticationToken authenticationTest = new UsernamePasswordAuthenticationToken(userDetailsTest, null, userDetailsTest.getAuthorities());
+//        authenticationTest.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+//        logger.info("authenticated user :" + "test" + ", setting security context:" + authenticationTest);
+//        SecurityContextHolder.getContext().setAuthentication(authenticationTest);
+
+        /** testing end **/
 
         String authHeader = request.getHeader(this.tokenHeader);
         if (authHeader != null && authHeader.startsWith(tokenHead)) {
