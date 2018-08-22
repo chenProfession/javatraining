@@ -14,6 +14,8 @@ public enum ResultEnum {
 
     SUCCESS(0, "success"),
 
+    FAILURE(2, "failure"),
+
     PARAM_ERROR(1, "incorrect parameter"),
 
     PRODUCT_NOT_EXIST(10, "Product does not exist"),

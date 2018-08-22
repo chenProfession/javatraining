@@ -32,6 +32,9 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private JwtTokenTool jwtTokenTool;
 
+    @Autowired
+    private UserService userService;
+
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
@@ -46,7 +49,7 @@ public class AuthServiceImpl implements AuthService {
         userToAdd.setPassword(encoder.encode(rawPassword));
         userToAdd.setLastPasswordResetDate(new Date());
         userToAdd.setRoles(Arrays.asList("ROLE_USER"));
-        //userRepository.insert(userToAdd);
+        userService.userRegister(userToAdd);
         return null;
     }
 

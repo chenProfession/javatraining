@@ -39,8 +39,8 @@ public class JwtUserDetailsService implements UserDetailsService{
         List<SysRole> roles = new ArrayList<>();
         SysRole sysRole = new SysRole();
 
-        sysRole.setId("admin");
-        sysRole.setName("ROLE_ADMIN");
+        sysRole.setRoleId("admin");
+        sysRole.setRoleName("ROLE_ADMIN");
 
         roles.add(sysRole);
         user.setRoles(roles);
@@ -49,8 +49,8 @@ public class JwtUserDetailsService implements UserDetailsService{
         //用于添加用户的权限。只要把用户权限添加到authorities 就万事大吉。
         for(SysRole role:user.getRoles())
         {
-            log.info(role.getName());
-            authorities.add(new SimpleGrantedAuthority(role.getName()));
+            log.info(role.getRoleName());
+            authorities.add(new SimpleGrantedAuthority(role.getRoleName()));
             log.info("loadUserByUsername: " + user);
         }
         user.setAuthorities(authorities);

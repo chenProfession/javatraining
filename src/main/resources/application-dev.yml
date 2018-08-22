@@ -8,7 +8,6 @@ logging:
      com.training.maikun.hello.HelloWorldController: debug
 
 spring:
-<<<<<<< HEAD
   jpa:
     hibernate:
       ddl-auto: update
@@ -20,12 +19,6 @@ spring:
       username: chen
       password: hsbc
       url: jdbc:mysql://193.112.35.196:3306/ordersys?characterEncoding=utf-8&useSSL=false
-=======
-  datasource:
-    type:
-    url: jdbc:mysql://127.0.0.1:3306/vhr?useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: 123
 
 # JWT 认证配置
 jwt:
@@ -34,4 +27,3 @@ jwt:
   expiration: 604800 #token七天不过期
   tokenHead: "Bearer "
   exceptUrl: "/auth/**"
->>>>>>> security
