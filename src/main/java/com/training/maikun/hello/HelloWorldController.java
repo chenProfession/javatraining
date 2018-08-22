@@ -48,6 +48,7 @@ public class HelloWorldController {
         String sessionId = session.getId();
         session.setAttribute("test",sessionId);
         response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("token", "1111222222");
 
         ResultView resultView = new ResultView();
         resultView.setCode(0);
@@ -59,13 +60,14 @@ public class HelloWorldController {
     @GetMapping(path = "/login")
     public ResultView login(HttpServletRequest request){
         HttpSession session = request.getSession(false);
+        String token = request.getHeader("token");
         String sessionValue = "null";
         if (session != null) {
             sessionValue = session.getAttribute("test").toString();
         }
         ResultView resultView = new ResultView();
         resultView.setCode(1);
-        resultView.setMsg("login success!" + sessionValue +"-----");
+        resultView.setMsg("login success!" + sessionValue +"-----" + token);
 
         return resultView;
     }

@@ -184,3 +184,127 @@
 2018-08-21 09:38:56.206  INFO 13442 --- [http-nio-8080-exec-10] c.t.maikun.products.ProductController    : success
 2018-08-21 09:39:24.054  INFO 13442 --- [http-nio-8080-exec-6] c.t.maikun.products.ProductController    : success
 2018-08-21 09:46:00.946  INFO 13442 --- [http-nio-8080-exec-3] c.t.maikun.products.ProductController    : success
+2018-08-22 17:54:42.398  INFO 24180 --- [main] com.training.maikun.Application          : Starting Application on ChengdeMacBook-Pro.local with PID 24180 (/Volumes/MyPassport/minprogram/order/target/classes started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-22 17:54:42.401  INFO 24180 --- [main] com.training.maikun.Application          : The following profiles are active: dev
+2018-08-22 17:54:42.469  INFO 24180 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a798d51: startup date [Wed Aug 22 17:54:42 CST 2018]; root of context hierarchy
+2018-08-22 17:54:44.162  INFO 24180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a88d5387] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-22 17:54:44.709  INFO 24180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-22 17:54:44.753  INFO 24180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-22 17:54:44.754  INFO 24180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-22 17:54:44.759  INFO 24180 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chengchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-22 17:54:44.901  INFO 24180 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring embedded WebApplicationContext
+2018-08-22 17:54:44.901  INFO 24180 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2432 ms
+2018-08-22 17:54:45.059  INFO 24180 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-22 17:54:45.064  INFO 24180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-22 17:54:45.065  INFO 24180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-22 17:54:45.065  INFO 24180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-22 17:54:45.065  INFO 24180 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-22 17:54:45.258  INFO 24180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-08-22 17:54:45.644  INFO 24180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-08-22 17:54:45.681  INFO 24180 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-22 17:54:45.694  INFO 24180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-22 17:54:45.896  INFO 24180 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2018-08-22 17:54:45.899  INFO 24180 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-08-22 17:54:45.950  INFO 24180 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-22 17:54:46.089  INFO 24180 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-22 17:54:46.860  INFO 24180 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-22 17:54:47.444  INFO 24180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-22 17:54:47.641  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a798d51: startup date [Wed Aug 22 17:54:42 CST 2018]; root of context hierarchy
+2018-08-22 17:54:47.671  WARN 24180 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-22 17:54:47.709  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHello()
+2018-08-22 17:54:47.711  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhi],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.hello.HelloWorldController.sayHi(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-22 17:54:47.711  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/login],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.hello.HelloWorldController.login(javax.servlet.http.HttpServletRequest)
+2018-08-22 17:54:47.711  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayPost],methods=[POST]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayPost(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-22 17:54:47.712  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/{name}],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithURI(java.lang.String)
+2018-08-22 17:54:47.712  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/person],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithParam(java.lang.String)
+2018-08-22 17:54:47.712  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/consume],methods=[POST],consumes=[application/json]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloConsumes(java.lang.String)
+2018-08-22 17:54:47.713  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/produces/{name}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloProduces(java.lang.String)
+2018-08-22 17:54:47.713  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/output],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.outputLoggerFile()
+2018-08-22 17:54:47.714  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList(javax.servlet.http.HttpServletResponse)
+2018-08-22 17:54:47.714  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/insert],methods=[POST]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.insertProduct(com.training.maikun.products.ProductInfo,javax.servlet.http.HttpServletResponse)
+2018-08-22 17:54:47.714  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/get-product-info],methods=[GET]}" onto public com.training.maikun.products.ProductInfo com.training.maikun.products.ProductController.getProductInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-08-22 17:54:47.717  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-22 17:54:47.717  INFO 24180 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-22 17:54:47.742  INFO 24180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-22 17:54:47.743  INFO 24180 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-22 17:54:47.992  INFO 24180 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-22 17:54:47.994  INFO 24180 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-22 17:54:48.003  INFO 24180 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-08-22 17:54:48.068  INFO 24180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/maikun'
+2018-08-22 17:54:48.071  INFO 24180 --- [main] com.training.maikun.Application          : Started Application in 6.352 seconds (JVM running for 7.092)
+2018-08-22 17:54:56.094  INFO 24180 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-22 17:54:56.094  INFO 24180 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-22 17:54:56.163  INFO 24180 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 68 ms
+2018-08-22 17:54:56.198  INFO 24180 --- [http-nio-8080-exec-1] c.t.maikun.hello.HelloWorldController    : I have written a log file,the level is info !
+2018-08-22 17:54:56.198 DEBUG 24180 --- [http-nio-8080-exec-1] c.t.maikun.hello.HelloWorldController    : I have written a log file,the level is debug !
+2018-08-22 17:54:56.198  WARN 24180 --- [http-nio-8080-exec-1] c.t.maikun.hello.HelloWorldController    : I have written a log file,the level is warn !
+2018-08-22 17:54:56.198 ERROR 24180 --- [http-nio-8080-exec-1] c.t.maikun.hello.HelloWorldController    : I have written a log file,the level is error !
+2018-08-22 17:55:10.115  INFO 24180 --- [http-nio-8080-exec-5] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-08-22 17:55:10.454  INFO 24180 --- [http-nio-8080-exec-5] c.t.maikun.products.ProductController    : success
+2018-08-22 18:01:00.908  INFO 24180 --- [Thread-16] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a798d51: startup date [Wed Aug 22 17:54:42 CST 2018]; root of context hierarchy
+2018-08-22 18:01:01.013  INFO 24180 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-22 18:01:01.014  INFO 24180 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-22 18:01:01.015  INFO 24180 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-22 18:01:01.016  INFO 24180 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-08-22 18:01:01.021  INFO 24180 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2018-08-22 18:02:39.733  INFO 24794 --- [main] com.training.maikun.Application          : Starting Application on ChengdeMacBook-Pro.local with PID 24794 (/Volumes/MyPassport/minprogram/order/target/classes started by chengchen in /Volumes/MyPassport/minprogram/order)
+2018-08-22 18:02:39.742  INFO 24794 --- [main] com.training.maikun.Application          : The following profiles are active: dev
+2018-08-22 18:02:39.836  INFO 24794 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6b81ce95: startup date [Wed Aug 22 18:02:39 CST 2018]; root of context hierarchy
+2018-08-22 18:02:41.246  INFO 24794 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c440e3e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-08-22 18:02:41.520  INFO 24794 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-08-22 18:02:41.550  INFO 24794 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-22 18:02:41.550  INFO 24794 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-08-22 18:02:41.554  INFO 24794 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/chengchen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-08-22 18:02:41.622  INFO 24794 --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring embedded WebApplicationContext
+2018-08-22 18:02:41.622  INFO 24794 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1786 ms
+2018-08-22 18:02:41.750  INFO 24794 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-08-22 18:02:41.756  INFO 24794 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-22 18:02:41.756  INFO 24794 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-22 18:02:41.756  INFO 24794 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-22 18:02:41.756  INFO 24794 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-22 18:02:41.896  INFO 24794 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-08-22 18:02:42.213  INFO 24794 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-08-22 18:02:42.243  INFO 24794 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-08-22 18:02:42.253  INFO 24794 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-08-22 18:02:42.393  INFO 24794 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2018-08-22 18:02:42.394  INFO 24794 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-08-22 18:02:42.429  INFO 24794 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-08-22 18:02:42.518  INFO 24794 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-08-22 18:02:43.099  INFO 24794 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-08-22 18:02:43.471  INFO 24794 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-22 18:02:43.670  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6b81ce95: startup date [Wed Aug 22 18:02:39 CST 2018]; root of context hierarchy
+2018-08-22 18:02:43.698  WARN 24794 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-08-22 18:02:43.739  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/login],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.hello.HelloWorldController.login(javax.servlet.http.HttpServletRequest)
+2018-08-22 18:02:43.740  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayPost],methods=[POST]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayPost(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-22 18:02:43.740  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhi],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.hello.HelloWorldController.sayHi(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-22 18:02:43.740  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHello()
+2018-08-22 18:02:43.741  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/{name}],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithURI(java.lang.String)
+2018-08-22 18:02:43.741  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/person],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloWithParam(java.lang.String)
+2018-08-22 18:02:43.741  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/consume],methods=[POST],consumes=[application/json]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloConsumes(java.lang.String)
+2018-08-22 18:02:43.742  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/sayhello/produces/{name}],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.sayHelloProduces(java.lang.String)
+2018-08-22 18:02:43.742  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello/output],methods=[GET]}" onto public java.lang.String com.training.maikun.hello.HelloWorldController.outputLoggerFile()
+2018-08-22 18:02:43.743  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/list],methods=[GET]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.getList(javax.servlet.http.HttpServletResponse)
+2018-08-22 18:02:43.744  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/insert],methods=[POST]}" onto public com.training.maikun.result.ResultView com.training.maikun.products.ProductController.insertProduct(com.training.maikun.products.ProductInfo,javax.servlet.http.HttpServletResponse)
+2018-08-22 18:02:43.744  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/buyer/product/get-product-info],methods=[GET]}" onto public com.training.maikun.products.ProductInfo com.training.maikun.products.ProductController.getProductInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-08-22 18:02:43.747  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-22 18:02:43.748  INFO 24794 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-22 18:02:43.771  INFO 24794 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-22 18:02:43.771  INFO 24794 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-22 18:02:44.007  INFO 24794 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-22 18:02:44.009  INFO 24794 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-22 18:02:44.015  INFO 24794 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-08-22 18:02:44.071  INFO 24794 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/maikun'
+2018-08-22 18:02:44.075  INFO 24794 --- [main] com.training.maikun.Application          : Started Application in 5.119 seconds (JVM running for 5.939)
+2018-08-22 18:02:50.977  INFO 24794 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/maikun]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-22 18:02:50.977  INFO 24794 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-22 18:02:51.013  INFO 24794 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2018-08-22 18:09:49.079  INFO 24794 --- [Thread-14] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6b81ce95: startup date [Wed Aug 22 18:02:39 CST 2018]; root of context hierarchy
+2018-08-22 18:09:49.418  INFO 24794 --- [Thread-14] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-22 18:09:49.419  INFO 24794 --- [Thread-14] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-22 18:09:49.420  INFO 24794 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-08-22 18:09:49.421  INFO 24794 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2018-08-22 18:09:49.431  INFO 24794 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
