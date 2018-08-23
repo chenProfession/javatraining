@@ -4,8 +4,6 @@ import com.training.maikun.result.ResultView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.WebUtils;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -49,6 +47,9 @@ public class HelloWorldController {
         session.setAttribute("test",sessionId);
         response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("token", "1111222222");
+        response.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
+        response.setHeader("Access-Control-Expose-Headers", "token");
+
 
         ResultView resultView = new ResultView();
         resultView.setCode(0);
@@ -58,13 +59,15 @@ public class HelloWorldController {
     }
 
     @GetMapping(path = "/login")
-    public ResultView login(HttpServletRequest request){
+    public ResultView login(HttpServletRequest request,HttpServletResponse response){
         HttpSession session = request.getSession(false);
         String token = request.getHeader("token");
         String sessionValue = "null";
         if (session != null) {
             sessionValue = session.getAttribute("test").toString();
         }
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
         ResultView resultView = new ResultView();
         resultView.setCode(1);
         resultView.setMsg("login success!" + sessionValue +"-----" + token);

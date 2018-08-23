@@ -14,7 +14,10 @@
 
 <body ng-app="myApp">
 
-​
+
+<div ng-controller="ExampleController">
+        <h1>hii : {{ koo }}</h1>
+</div>
 
 <div  ng-controller="siteCtrl"> 
 
@@ -26,10 +29,6 @@
 
 </div>
 
-<div ng-controller="ExampleController">
-        <h1>hii : {{ koo }}</h1>
-    </div>
-
 ​
 
 <script>
@@ -38,30 +37,6 @@ var app = angular.module('myApp', ['ngCookies']);
 
     
 
-app.controller('siteCtrl', function($scope, $http, $cookies) {
-
-    $http({
-
-        method: 'GET',
-
-        url: 'http://localhost:8080/maikun/hello/sayhi'
-
-
-    }).then(function successCallback(response) {
-
-            $scope.names = response.data.msg;
-            $scope.token = response.headers('token');
-            $cookies.put('token',response.headers('token'));
-            
-            //window.location = 'http://localhost:8080/maikun/hello/login';
-
-        }, function errorCallback(response) {
-        	$scope.names = "error: " + response;
-           // 请求失败执行代码
-    });
-
-});
-
 app.controller('ExampleController', function($scope,$cookies) {
          // Retrieving a cookie
          $scope.koo = $cookies.get('token');       
@@ -69,6 +44,35 @@ app.controller('ExampleController', function($scope,$cookies) {
          
        });
 
+app.controller('siteCtrl', function($scope, $http, $cookies) {
+
+    $scope.token = $cookies.get('token');
+
+    $http({
+
+        method: 'GET',
+
+        url: 'http://localhost:8080/maikun/hello/login',
+
+        headers: {
+            'token' : $cookies.get('token'),
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Access-Control-Expose-Headers':'token'
+        }
+
+
+    }).then(function successCallback(response) {
+
+            $scope.names = response.data.msg;
+            
+            //window.location = 'http://localhost:8080/maikun/hello/login';
+
+        }, function errorCallback(response) {
+            $scope.names = "error: " + response;
+           // 请求失败执行代码
+    });
+
+});
 
 </script>
 
