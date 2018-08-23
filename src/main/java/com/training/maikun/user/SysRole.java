@@ -5,6 +5,7 @@ import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -15,7 +16,7 @@ import javax.persistence.Table;
  * @date: 2018/8/12 下午8:18
  */
 @Data
-
+@Entity
 @Table(name = "user_role")
 @DynamicUpdate
 @JsonIgnoreProperties(ignoreUnknown = true)
