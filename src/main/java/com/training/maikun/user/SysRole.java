@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @program: order
@@ -23,7 +20,8 @@ import javax.persistence.Table;
 public class SysRole {
 
     @Id
-    private String roleId;
+    @Column(name = "id")
+    private Integer roleId;
 
     @Column(nullable = false)
     private String roleName;

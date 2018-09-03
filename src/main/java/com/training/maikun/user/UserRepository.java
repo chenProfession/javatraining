@@ -2,6 +2,8 @@ package com.training.maikun.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 /**
  * @program: user
  * @Description: Repository

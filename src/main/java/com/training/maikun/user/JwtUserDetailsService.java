@@ -1,12 +1,15 @@
 package com.training.maikun.user;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +22,10 @@ import java.util.List;
 @Service
 @Slf4j
 public class JwtUserDetailsService implements UserDetailsService{
+
+    @Autowired
+    private UserRepository userRepository;
+
     /**
      * Locates the user based on the username. In the actual implementation, the search
      * may possibly be case sensitive, or case insensitive depending on how the
@@ -32,20 +39,17 @@ public class JwtUserDetailsService implements UserDetailsService{
      *                                   GrantedAuthority
      */
     @Override
+    @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         /** find the user by username **/
         /** testing **/
-        JwtUser user = new JwtUser("111","test","test");
-        List<SysRole> roles = new ArrayList<>();
-        SysRole sysRole = new SysRole();
+        User temp = userRepository.findByUsername(username);
+        JwtUser user = new JwtUser(temp.getId().toString(),temp.getUsername(),temp.getPassword());
+        List<SysRole> roles = temp.getRoles();
 
-        sysRole.setRoleId("admin");
-        sysRole.setRoleName("ROLE_ADMIN");
-
-        roles.add(sysRole);
         user.setRoles(roles);
 
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         //用于添加用户的权限。只要把用户权限添加到authorities 就万事大吉。
         for(SysRole role:user.getRoles())
         {

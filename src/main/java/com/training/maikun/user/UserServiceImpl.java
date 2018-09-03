@@ -3,6 +3,7 @@ package com.training.maikun.user;
 import com.training.maikun.enums.ResultEnum;
 import com.training.maikun.result.ResultView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
@@ -58,6 +59,8 @@ public class UserServiceImpl implements UserService{
      */
     @Override
     public ResultView userRegister(User user) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        user.setPassword(encoder.encode(user.getPassword()));
         User result = userRepository.saveAndFlush(user);
         ResultView resultView = new ResultView();
         if(result != null){

@@ -25,7 +25,8 @@ import java.util.List;
 public class User {
 
     @Id
-    private String id;
+    @Column(name = "id")
+    private Integer id;
 
     @Column(nullable = false)
     private String username;
@@ -38,5 +39,6 @@ public class User {
     @LastModifiedDate
     private Date lastPasswordResetDate;
 
-    private List<String> roles;
+    @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
+    private List<SysRole> roles;
 }

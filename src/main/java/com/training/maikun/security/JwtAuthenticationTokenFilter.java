@@ -54,7 +54,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
      */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        log.info("i am starting to work");
+        log.info("i am starting to work filter");
 
         /** testing **/
 //        UserDetails userDetailsTest = this.userDetailsService.loadUserByUsername("test");

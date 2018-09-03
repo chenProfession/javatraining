@@ -1,6 +1,8 @@
 package com.training.maikun.user;
 
+import com.training.maikun.result.ResultView;
 import com.training.maikun.security.JwtTokenTool;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -8,7 +10,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -21,6 +22,7 @@ import java.util.Date;
  * @date: 2018/8/13 上午11:55
  */
 @Service
+@Slf4j
 public class AuthServiceImpl implements AuthService {
 
     @Autowired
@@ -39,28 +41,38 @@ public class AuthServiceImpl implements AuthService {
     private String tokenHead;
 
     @Override
-    public User register(User userToAdd) {
+    public ResultView register(User userToAdd) {
         final String username = userToAdd.getUsername();
         if (username == null) {
             return null;
         }
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
+        SysRole sysRole = new SysRole();
+        sysRole.setRoleId(0);
+        sysRole.setRoleName("ROLE_USER");
+
         final String rawPassword = userToAdd.getPassword();
-        userToAdd.setPassword(encoder.encode(rawPassword));
-        userToAdd.setLastPasswordResetDate(new Date());
-        userToAdd.setRoles(Arrays.asList("ROLE_USER"));
-        userService.userRegister(userToAdd);
-        return null;
+        userToAdd.setPassword(rawPassword);
+        userToAdd.setRoles(Arrays.asList(sysRole));
+
+        ResultView resultView = userService.userRegister(userToAdd);
+        return resultView;
     }
 
     @Override
     public String login(String username, String password) {
-        UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken(username, password);
+
+        Authentication upToken = new UsernamePasswordAuthenticationToken(username, password);
         final Authentication authentication = authenticationManager.authenticate(upToken);
+
+        if (!authentication.isAuthenticated())
+        {
+            log.error("username or password is wrong");
+        }
         SecurityContextHolder.getContext().setAuthentication(authentication);
         final UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         final String token = jwtTokenTool.generateToken(userDetails);
-        return token;
+        return tokenHead + token;
     }
 
     @Override

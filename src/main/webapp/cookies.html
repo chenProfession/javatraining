@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular.min.js"></script>
+
+<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular-cookies.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+
+
+<div ng-controller="ExampleController">
+        <h1>hii : {{ koo }}</h1>
+</div>
+
+<div  ng-controller="siteCtrl"> 
+
+    <h1>hii : {{names}}</h1>
+
+    <h1>hii : {{token}}</h1>
+    
+    <a href="http://localhost:8080/maikun/hello/login">click me</a>
+
+</div>
+
+​
+
+<script>
+
+var app = angular.module('myApp', ['ngCookies']);
+
+    
+
+app.controller('ExampleController', function($scope,$cookies) {
+         // Retrieving a cookie
+         $scope.koo = $cookies.get('token');       
+         // Setting a cookie
+         
+       });
+
+app.controller('siteCtrl', function($scope, $http, $cookies) {
+
+    $scope.token = $cookies.get('token');
+
+    $http({
+
+        method: 'GET',
+
+        url: 'http://localhost:8080/maikun/hello/login',
+
+        headers: {
+            'token' : $cookies.get('token'),
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Access-Control-Expose-Headers':'token'
+        }
+
+
+    }).then(function successCallback(response) {
+
+            $scope.names = response.data.msg;
+            
+            //window.location = 'http://localhost:8080/maikun/hello/login';
+
+        }, function errorCallback(response) {
+            $scope.names = "error: " + response;
+           // 请求失败执行代码
+    });
+
+});
+
+</script>
+
+​
+
+</body>
+
+</html>
+
